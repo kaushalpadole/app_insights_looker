@@ -9,8 +9,8 @@ This project answers the questions in the supplied App Insights case study using
 The Looker dashboard reports **9,638 apps**, **75.2 billion installs**, **2.1 billion reviews**, and an **average rating of 4.17**. It displays **33 categories**, app-size bins, a free/paid split, content-rating counts and averages, and details for highly reviewed apps.
 
 <img width="1440" height="1078" alt="Screenshot 2026-10-03 164202" src="https://github.com/user-attachments/assets/b492cadc-a2c2-4822-8bf4-2df5ed392209" />
-<img width="1438" height="1078" alt="Screenshot 2026-10-03 000924" src="https://github.com/user-attachments/assets/e6c05e95-9400-48c6-a593-fee6278bb303" />
-<img width="1442" height="1078" alt="Screenshot 2026-10-03 000936" src="https://github.com/user-attachments/assets/cff91fbf-1245-465a-ba47-8759cc2bd023" />
+<img width="1441" height="1078" alt="Screenshot 2026-10-11 185046" src="https://github.com/user-attachments/assets/48567b0f-114d-4dd4-9878-96c37c862902" />
+<img width="1437" height="1078" alt="Screenshot 2026-10-11 185108" src="https://github.com/user-attachments/assets/f2d5259c-db8c-4182-ab30-a340ce032b93" />
 <img width="1435" height="1078" alt="Screenshot 2026-10-03 164220" src="https://github.com/user-attachments/assets/3da26cba-b6d7-496e-98aa-f6ba0976e059" />
 
 
@@ -86,7 +86,7 @@ The second Looker page includes genre counts above one million installs, app siz
 
 ### 7. What is the impact of app size on the number of installs?
 
-**Answer:** The scatter plot compares size in MB with installs and includes one app near **1B installs** at roughly **76 MB**, while most plotted apps have much lower install values.
+**Answer:** **App size has little direct impact on installs.** Apps of the same size (e.g. exactly 100 MB) range from 500 installs to 100M. Both heavy and light categories reach the top: Game apps average 41.7 MB and lead with 13.5 B installs, while light categories like Communication (11 B) and Tools (8 B) follow close behind. Most apps are small (63% under 20 MB) and large apps are rare, but installs do not consistently rise or fall with size.
 
 ### 8. Which apps have the highest number of reviews, and what are their ratings?
 
@@ -128,6 +128,27 @@ The second Looker page includes genre counts above one million installs, app siz
 ### 1. What are the top 10 apps with the highest ratings, and how do their reviews and installs compare?
 
 **Answer:** 
+| Rank | App | Reviews | Rating |
+|---|---|---|---|
+| 1 | Facebook | 78M | 4.10 |
+| 2 | WhatsApp Messenger | 69M | 4.40 |
+| 3 | Instagram | 67M | 4.50 |
+| 4 | Messenger – Text and Video Chat for Free | 57M | 4.00 |
+| 5 | Clash of Clans | 45M | 4.60 |
+| 6 | Clean Master – Space Cleaner & Antivirus | 43M | 4.70 |
+| 7 | Subway Surfers | 28M | 4.50 |
+| 8 | YouTube | 26M | 4.30 |
+| 9 | Security Master – Antivirus, VPN, AppLock, Booster | 25M | 4.70 |
+| 10 | Clash Royale | 23M | 4.60 |
+| 11 | Candy Crush Saga | 22M | 4.40 |
+| 12 | UC Browser – Fast Download Private & Secure | 18M | 4.50 |
+| 13 | Snapchat | 17M | 4.00 |
+| 14 | 360 Security – Free Antivirus, Booster, Cleaner | 17M | 4.60 |
+| 15 | My Talking Tom | 15M | 4.50 |
+| 16 | 8 Ball Pool | 14M | 4.50 |
+| 17 | DU Battery Saver – Battery Charger & Battery Life | 13M | 4.50 |
+| 18 | BBM – Free Calls & Messages | 13M | 4.30 |
+| 19 | Cache Cleaner-DU Speed Booster (booster & cleaner) | 13M | 4.50 |
 
 ### 2. What update patterns or seasonal trends appear over time?
 
@@ -143,5 +164,5 @@ The second Looker page includes genre counts above one million installs, app siz
 
 ### 5. What is the relationship between app genre and user ratings?
 
-**Answer:** This question is answered using the Power BI reference screenshot because the supplied Looker pages do not show genre-rating averages. Visible examples include **Casual;Brain Games (mean 4.48, median 4.5)**, **Events (4.44, 4.5)**, **Art & Design;Creativity (4.35, 4.5)**, **Parenting (4.34, 4.5)**, **Arcade;Action & Adventure (4.34, 4.5)**, and **Health & Fitness (4.25, 4.5)**.
+**Answer:** **Casual;Brain Games (mean 4.48, median 4.5)**, **Events (4.44, 4.5)**, **Art & Design;Creativity (4.35, 4.5)**, **Parenting (4.34, 4.5)**, **Arcade;Action & Adventure (4.34, 4.5)**, and **Health & Fitness (4.25, 4.5)**.
 
