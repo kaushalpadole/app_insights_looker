@@ -127,28 +127,7 @@ The second Looker page includes genre counts above one million installs, app siz
 
 ### 1. What are the top 10 apps with the highest ratings, and how do their reviews and installs compare?
 
-**Answer:** 
-| Rank | App | Reviews | Rating |
-|---|---|---|---|
-| 1 | Facebook | 78M | 4.10 |
-| 2 | WhatsApp Messenger | 69M | 4.40 |
-| 3 | Instagram | 67M | 4.50 |
-| 4 | Messenger – Text and Video Chat for Free | 57M | 4.00 |
-| 5 | Clash of Clans | 45M | 4.60 |
-| 6 | Clean Master – Space Cleaner & Antivirus | 43M | 4.70 |
-| 7 | Subway Surfers | 28M | 4.50 |
-| 8 | YouTube | 26M | 4.30 |
-| 9 | Security Master – Antivirus, VPN, AppLock, Booster | 25M | 4.70 |
-| 10 | Clash Royale | 23M | 4.60 |
-| 11 | Candy Crush Saga | 22M | 4.40 |
-| 12 | UC Browser – Fast Download Private & Secure | 18M | 4.50 |
-| 13 | Snapchat | 17M | 4.00 |
-| 14 | 360 Security – Free Antivirus, Booster, Cleaner | 17M | 4.60 |
-| 15 | My Talking Tom | 15M | 4.50 |
-| 16 | 8 Ball Pool | 14M | 4.50 |
-| 17 | DU Battery Saver – Battery Charger & Battery Life | 13M | 4.50 |
-| 18 | BBM – Free Calls & Messages | 13M | 4.30 |
-| 19 | Cache Cleaner-DU Speed Booster (booster & cleaner) | 13M | 4.50 |
+**Answer:** After filtering for apps with more than 100K reviews, the top 10 all rate between 4.8 and 4.9. Four apps reach 4.9: Learn Japanese, JW Library, Six Pack in 30 Days and Tickets + PDA 2018. JW Library stands out with about 922.8K reviews at 4.9, so its rating is backed by a large user base.
 
 ### 2. What update patterns or seasonal trends appear over time?
 
