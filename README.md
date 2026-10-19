@@ -2,8 +2,6 @@
 
 This project answers the questions in the supplied App Insights case study using the Looker Studio dashboard.
 
-> **How to read the answers:** Looker findings are taken from the supplied Looker screenshots. Any Power BI reference is identified as such; it is not presented as a Looker result. Some screens use rounded display values, and the dashboards show different app totals, so figures from separate report versions should not be combined without checking the underlying data.
-
 ## Project overview
 
 The Looker dashboard reports **9,638 apps**, **75.2 billion installs**, **2.1 billion reviews**, and an **average rating of 4.17**. It displays **33 categories**, app-size bins, a free/paid split, content-rating counts and averages, and details for highly reviewed apps.
