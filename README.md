@@ -125,7 +125,11 @@ The second Looker page includes genre counts above one million installs, app siz
 
 ### 1. What are the top 10 apps with the highest ratings, and how do their reviews and installs compare?
 
-**Answer:** After filtering for apps with more than 100K reviews, the top 10 all rate between 4.8 and 4.9. Four apps reach 4.9: Learn Japanese, JW Library, Six Pack in 30 Days and Tickets + PDA 2018. JW Library stands out with about 922.8K reviews at 4.9, so its rating is backed by a large user base.
+**Answer:** After filtering for apps with more than 100K reviews, the top 10 all rate between 4.8 and 4.9. Learn Japanese, Korean... has a rating of 4.9, with 133.1K reviews and 1 million installs.
+- JW Library has a rating of 4.9, with 922.8K reviews and 10 million installs.
+- Six Pack in 30 Days has a rating of 4.9, with 272.3K reviews and 10 million installs.
+- PewDiePie's Tuber Simulator has a rating of 4.8, with 1.5 million reviews and 10 million installs.
+- DU Recorder has a rating of 4.8, with 2.6 million reviews and 50 million installs, making it the most reviewed and most installed app among the ten shown.
 
 ### 2. What update patterns or seasonal trends appear over time?
 
