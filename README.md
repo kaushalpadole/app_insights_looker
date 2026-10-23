@@ -46,7 +46,7 @@ The second Looker page includes genre counts above one million installs, app siz
 
 ### 8. What is the average number of reviews for free vs. paid apps?
 
-**Answer:** The Looker table reports **2.1 billion total reviews for free apps** and **6.6 million total reviews for paid apps**. These are totals, not average reviews per app.
+**Answer:** The Looker table reports **234.4K average reviews for free apps** and **6.68.8K average reviews for paid apps**. 
 
 ### 9. What is the average app size for each category?
 
