@@ -2,6 +2,9 @@
 
 This project answers the questions in the supplied App Insights case study using the Looker Studio dashboard.
 
+LIVE DASHBOARD:
+https://datastudio.google.com/s/nFzav0hpAdk
+
 ## Project overview
 
 The Looker dashboard reports **9,638 apps**, **75.2 billion installs**, **2.1 billion reviews**, and an **average rating of 4.17**. It displays **33 categories**, app-size bins, a free/paid split, content-rating counts and averages, and details for highly reviewed apps.
