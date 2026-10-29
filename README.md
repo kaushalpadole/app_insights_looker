@@ -1,199 +1,302 @@
-# Google Play Store App Insights — Looker Studio
+# App Insights — Google Play Store Analytics
 
-This project is a data storytelling and dashboarding case study focused on the Google Play Store dataset. The goal was to analyze app performance and answer a structured set of business questions using a Looker Studio dashboard, while also documenting the key findings, challenges, and recommendations for future improvement.
+## Project Overview
 
-Live dashboard:
-https://datastudio.google.com/s/nFzav0hpAdk
+App Insights is a data analytics project built using **Google Looker Studio** to analyze application performance on the Google Play Store.
 
-## Project overview
+The project explores application ratings, installs, reviews, categories, genres, pricing, app sizes, content ratings, and update history to identify patterns in user satisfaction and app popularity.
 
-The repository contains a dashboard and supporting analysis built around the Google Play Store App Insights case study. The work focuses on understanding how apps perform across categories, price points, content ratings, install ranges, app sizes, and update patterns.
+The interactive dashboard transforms raw application data into visual insights that can help developers and product teams make informed decisions about product development, user engagement, and monetization.
 
-The dashboard summarizes the app dataset with business-ready metrics such as:
+**Live Dashboard:** [View App Insights](https://datastudio.google.com/s/nFzav0hpAdk)
 
-- Total apps analyzed
-- Total installs
-- Total reviews
-- Average app rating
-- Distribution of free vs. paid apps
-- App size and content rating breakdowns
-- Category and genre performance
-- Update trends over time
+## Business Problem
 
-The overall story presented by the dashboard is that the Google Play ecosystem is dominated by free apps, with a large majority of users installing communication, productivity, entertainment, and gaming apps. At the same time, app quality is not determined solely by price or size; higher-rated apps can appear across a wide range of install volumes and categories.
+The Google Play Store contains applications with different ratings, download volumes, prices, sizes, and target audiences. Understanding these differences can help developers identify opportunities to improve application performance and user satisfaction.
 
-## Why this project matters
+This project investigates the following business questions:
 
-This project is useful because it blends business analysis with data visualization. Instead of only reporting raw numbers, it turns a large app dataset into actionable insights that help answer questions like:
+* Which application categories generate the highest install volumes?
+* How do ratings vary across categories and genres?
+* How do free and paid applications differ?
+* Is app size associated with the number of installs?
+* Which applications receive the most reviews?
+* How do ratings vary across different install tiers?
+* What patterns appear in the recorded last-updated dates?
 
-- Which app categories attract the most users?
-- How does app size influence installs or ratings?
-- Are free apps much more common than paid apps?
-- Which content ratings are dominant in the ecosystem?
-- What patterns exist in app updates and historical growth?
+The objective is to identify meaningful patterns and translate them into actionable recommendations.
 
-This type of dashboard is valuable for product teams, app analysts, and digital strategy stakeholders who want to understand what is working in the app marketplace.
+## Project Requirements
 
-## Project requirements
+* Analyze the Google Play Store application dataset.
+* Clean and prepare numeric and categorical fields for analysis.
+* Handle missing values, duplicates, and inconsistent data formats.
+* Create interactive visualizations using Google Looker Studio.
+* Compare application performance across relevant categories.
+* Identify trends and patterns in ratings, installs, reviews, and app sizes.
+* Present key findings through an organized dashboard.
+* Provide recommendations supported by the available data.
 
-The project was designed around a clear set of analytical requirements:
+## Tools and Technologies
 
-1. Analyze the available Google Play app dataset without losing the original business context.
-2. Build a dashboard that can answer both basic and advanced questions from the case study.
-3. Represent the data in a clear, visual, and intuitive way for non-technical stakeholders.
-4. Validate core metrics such as average rating, install totals, free-vs-paid split, and category distribution.
-5. Document not only the final findings but also the reasoning and limitations of the analysis.
-6. Present the insights in a format that is easy to review and share.
+| Tool / Technology                | Purpose                                                    |
+| -------------------------------- | ---------------------------------------------------------- |
+| Google Looker Studio             | Interactive dashboards, KPI scorecards, tables, and charts |
+| Google Play Store dataset        | Source data for application analysis                       |
+| Data cleaning and transformation | Prepare data for accurate aggregation and visualization    |
+| GitHub                           | Project documentation, screenshots, and analysis solutions |
 
-These requirements guided both the dashboard design and the written analysis in the supporting documentation.
+## Dataset Description
 
-## Repository structure
+The dataset contains information about Google Play Store applications.
 
-The repository is intentionally lightweight and contains the main analysis materials:
+| Column         | Description                      |
+| -------------- | -------------------------------- |
+| App            | Application name                 |
+| Category       | Application category             |
+| Rating         | Average user rating              |
+| Reviews        | Number of user reviews           |
+| Size           | Application size                 |
+| Installs       | Application install-count band   |
+| Type           | Free or paid classification      |
+| Price          | Application price                |
+| Content Rating | Intended audience classification |
+| Genres         | Application genre                |
+| Last Updated   | Recorded last-update date        |
+| Current Ver    | Current application version      |
+| Android Ver    | Minimum required Android version |
 
-- `README.md` — project summary and documentation
-- `Solutions.md` — business questions and answers for the case study
-- `docs/` — supporting documentation and reference files
-- `screenshots/` — dashboard screenshots showing key visuals and layouts
+These fields help evaluate application popularity, user satisfaction, pricing, size, and update-date patterns.
 
-## Tools and technologies
+## Dashboard Features
 
-This project relies mainly on business intelligence and reporting tools rather than a traditional software stack.
+The Looker Studio dashboard includes:
 
-### Primary tools
+* KPI scorecards for key application metrics.
+* Category-wise application and install comparisons.
+* Free versus paid application analysis.
+* Application ratings and review comparisons.
+* App-size distribution and category-level size comparisons.
+* Content-rating distribution.
+* Top-installed and highly reviewed applications.
+* Average ratings by category, genre, and install tier.
+* Scatter plots comparing installs with ratings, app size, and price.
+* Application update-date trends.
+* Tables highlighting highly rated and highly reviewed applications.
 
-- Google Looker Studio
-  - Used to build the dashboard
-  - Ideal for interactive reporting, KPI cards, charts, tables, and filters
-- Google Play Store dataset / app metrics source
-  - Main input for the case study analysis
-- Power BI reference material
-  - Used as a benchmark and comparison point for validation of findings
+These visualizations make it easier to compare applications and identify patterns in the dataset.
 
-### Workflow used
+## Data Cleaning and Preparation
 
-- Review the app dataset and case-study business questions
-- Identify the important dimensions and KPIs
-- Build dashboard visuals for summary and deeper analysis
-- Cross-check metric calculations and interpretation
-- Document answers, insights, and recommendations
+Data preparation was necessary to make the source data suitable for analysis.
 
-## Methodology
+The main tasks included:
 
-The analysis followed a practical business intelligence workflow:
+* Removing duplicate records.
+* Removing a malformed source row where fields were incorrectly aligned.
+* Converting install counts and review counts into numeric fields.
+* Converting application prices into numeric values.
+* Converting application sizes into MB where available.
+* Handling missing ratings and sizes appropriately.
+* Parsing last-updated dates.
+* Creating year and month fields for update-date analysis.
+* Creating install tiers for comparing average ratings.
+* Creating a flag to identify applications rated 4.0 and above.
 
-1. Understand the problem context
-   - The project starts with a case study and a clear set of exploration questions.
+Missing ratings and sizes should not be treated as genuine zero values because doing so can distort averages and comparisons.
 
-2. Define the key metrics
-   - Average rating
-   - Total installs
-   - Number of apps by category
-   - App size distribution
-   - Free vs paid share
-   - Review counts
-   - Update trends
+## Challenges Faced
 
-3. Design meaningful visuals
-   - KPI cards for quick summary
-   - Donut charts for free vs paid
-   - Bar charts for category performance
-   - Scatter plots for installs vs ratings
-   - Tables for top apps and category comparisons
+### 1. Inconsistent Data Formats
 
-4. Interpret with caution
-   - Some patterns are descriptive, not causal
-   - Visual trends need business context before being treated as direct recommendations
+Install counts, prices, and app sizes appeared in different formats. These values needed to be normalized before they could be analyzed numerically.
 
-## Challenges faced
+### 2. Missing Values
 
-Several challenges were encountered while building and interpreting the dashboard.
+Some applications lacked ratings or usable size information. Appropriate handling was necessary to avoid misleading averages and visualizations.
 
-### 1. Large and multi-dimensional dataset
-The Google Play dataset contains many app attributes, including category, content rating, price, size, installs, rating, and review metrics. Combining these dimensions in a clear dashboard required careful filtering and chart selection.
+### 3. Highly Skewed Install Counts
 
-### 2. Understanding metric interpretation
-Some metrics are intuitive but can be misleading without context. For example, a high average rating does not necessarily mean that most apps are rated highly, and install counts can vary massively across categories and app types.
+Install counts ranged from small values to billions. This made some visualizations difficult to interpret because smaller values became compressed alongside very large values.
 
-### 3. Need for meaningful business questions
-A dashboard is much more useful when tied to decision-driven questions. The project had to balance technical completeness with practical business interpretation.
+Logarithmic scaling was used for scatter plots where appropriate to improve readability.
 
-### 4. Data quality and ambiguous categories
-Some rows or classifications may be incomplete or inconsistent, especially when comparing free vs paid apps, content ratings, or category-level distributions. The analysis needed to keep interpretation honest and not overstate certainty.
+### 4. Choosing Appropriate Aggregations
 
-### 5. Turning analysis into insight
-The hardest part was not generating charts but translating them into clear business insights that a stakeholder could act on without a technical background.
+Different business questions required different calculations. For example, total installs by category required summing install values, while average rating by category required calculating average ratings.
 
-## Key insights from the analysis
+### 5. Date-Related Limitations
 
-The analysis produced several important findings:
+The dataset contains one recorded last-updated date per application rather than a complete history of releases. Therefore, the exact average time between consecutive updates cannot be calculated.
 
-- Average rating is around 4.17 out of 5, indicating generally positive sentiment.
-- Free apps dominate the store, with around 92.2% of the surveyed apps being free.
-- The most common content rating is "Everyone".
-- Game, Communication, Tools, Family, and Productivity categories lead in total installs.
-- App size does not have a direct and obvious relationship with install success.
-- High-quality apps can appear in many categories, not only in premium or paid segments.
-- Apps with large review volumes often also have very high install numbers, suggesting a strong connection between user engagement and visibility.
+### 6. Unavailable Review Text
 
-The visualizations also show that category and content strategy matter as much as raw product quality. For example, a category like Games may dominate installs because of user behavior and retention, but that does not mean all app types should be treated the same way.
+The dataset contains review counts but not the text of individual reviews. Consequently, identifying recurring complaints or conducting sentiment analysis was not possible using the available data alone.
 
-## Dashboard highlights
+## Key Insights
 
-The project includes visual summaries such as:
+The following insights are based on the dashboard and its documented analysis.
 
-- KPI cards for dataset overview
-- App category and genre rankings
-- Install distribution by app type and content rating
-- Rating trends and pricing comparisons
-- Top reviewed and highly installed apps
-- Update frequency and historical app growth
+### 1. Overall Application Ratings
 
-Screenshots of the dashboard are included in the repository to provide a visual record of the reporting experience.
+The dashboard reports an average rating of approximately **4.17 out of 5**.
 
-<img width="1440" height="1078" alt="Looker dashboard overview" src="https://github.com/user-attachments/assets/b492cadc-a2c2-4822-8bf4-2df5ed392209" />
-<img width="1441" height="1078" alt="Looker dashboard second view" src="https://github.com/user-attachments/assets/48567b0f-114d-4dd4-9878-96c37c862902" />
-<img width="1437" height="1078" alt="Dashboard detail view" src="https://github.com/user-attachments/assets/f2d5259c-db8c-4182-8bf4-2df5ed392209" />
-<img width="1447" height="1078" alt="Dashboard chart comparison" src="https://github.com/user-attachments/assets/37470232-7f60-425c-9f92-7f96dee72b95" />
+This provides an overall view of user ratings for the records included in the calculation.
 
-## Recommendations for improvement
+### 2. Application Categories
 
-To take the project further, the following improvements would make the analysis more actionable:
+The dataset contains **33 unique application categories**, demonstrating the variety of applications represented in the marketplace.
 
-### 1. Add deeper segmentation
-Break the data down by geography, app category, and user acquisition channel to understand where performance differences are driven by audience behavior.
+### 3. Free Versus Paid Applications
 
-### 2. Include a review text sentiment layer
-The current dashboard focuses on rating and counts. Adding text-based sentiment analysis would reveal what users actually like or dislike about apps.
+Free applications dominate the dataset.
 
-### 3. Introduce trend-based forecasting
-Append time-series analysis to forecast install and rating evolution, especially during app update cycles and seasonal changes.
+The documented report lists 8,886 free apps and 751 paid apps, along with one record without a displayed type.
 
-### 4. Add conversion metrics
-A stronger product view would combine installs with retention, review frequency, and update behavior to show whether high installs translate into long-term engagement.
+This indicates that free applications are more common in the analyzed data, although it does not establish which monetization strategy is more profitable.
 
-### 5. Improve business storytelling
-Set up narrative sections or executive summary pages to explain the story behind the numbers, not just the numbers themselves.
+### 4. Content Ratings
 
-### 6. Expand the data model
-If the dataset is updated, add more dimensions such as app age, developer performance, and monetization strategy to support richer strategic analysis.
+The Everyone content-rating group is the largest, containing **7,883 applications** in the documented analysis.
 
-## Conclusion
+This suggests that applications intended for a broad audience form a substantial portion of the dataset.
 
-This project demonstrates how a moderately complex dataset can be transformed into a compelling business dashboard with clear, actionable insights. The work is not only about generating charts; it is about turning raw app metadata into strategic understanding.
+### 5. Categories With High Install Volumes
 
-The strongest value of the project lies in its combination of:
+The documented category analysis identifies the following leaders:
 
-- structured business questions
-- dashboard-driven storytelling
-- clear KPI visualization
-- practical insight generation
-- honest interpretation of trends and limitations
+* Game: approximately 13.5 billion installs.
+* Communication: approximately 11 billion installs.
+* Tools: approximately 8 billion installs.
+* Family: approximately 6.2 billion installs.
+* Productivity: approximately 5.8 billion installs.
 
-This makes the repository a strong example of a case-study-driven analytics project that bridges raw data and decision-making.
+These figures indicate substantial install volume across gaming, communication, utility, and productivity applications.
 
-## Related files
+### 6. Ratings Do Not Guarantee Popularity
 
-- `Solutions.md` contains the complete question-answer breakdown for the case study.
-- `docs/App Insights (PowerBI).pdf` serves as a reference for comparison and validation.
-- `screenshots/` contains the dashboard snapshots used to support the narrative.
+Some highly rated applications have comparatively fewer reviews and installs than widely used applications.
+
+Therefore, a high rating alone does not indicate that an application has a large audience.
+
+Developers should evaluate ratings alongside installs, reviews, and other business metrics.
+
+### 7. Application Size and Installs
+
+The scatter-plot analysis does not reveal a simple, consistent relationship between app size and install volume.
+
+Both relatively small and large applications can achieve substantial install counts.
+
+Application size should therefore be considered alongside functionality, performance, user experience, and market demand.
+
+### 8. Recorded Update-Date Trends
+
+The documented update-date chart shows a substantial increase in the number of apps with recorded last-updated dates in later years, reaching approximately 6,300 applications in 2018.
+
+This represents the distribution of recorded dates in the dataset, not the total number of updates released during each year.
+
+### 9. Ratings Across Install Tiers
+
+The documented analysis shows an average rating of approximately 4.37 for the 100M–500M install tier, compared with 4.22 for the 500M+ tier.
+
+This indicates that average ratings do not necessarily increase continuously with install volume. The pattern is descriptive and does not establish causation.
+
+### 10. Highly Reviewed Applications
+
+Applications such as Facebook, WhatsApp Messenger, Instagram, and Messenger appear among the highly reviewed apps.
+
+These applications combine substantial user engagement with large install counts, although their ratings differ.
+
+Review volume and ratings should be evaluated together to understand application performance more effectively.
+
+## Recommendations for Improving App Performance
+
+### 1. Improve User Experience and Reliability
+
+Developers should prioritize application stability, loading speed, navigation, and usability.
+
+Regularly monitoring crashes, performance issues, and user feedback can help identify problems that negatively affect ratings and continued usage.
+
+### 2. Optimize Application Size
+
+Developers should evaluate opportunities to reduce unnecessary downloads and resource consumption without compromising important features.
+
+Smaller downloads may benefit users with limited device storage or slower internet connections. The impact should be tested using installation completion rates, performance metrics, and user retention.
+
+### 3. Use Category-Specific Benchmarks
+
+Developers should compare their applications with others in the same category.
+
+Relevant benchmarks include average ratings, install volumes, review counts, and application sizes.
+
+These comparisons can help identify performance gaps and prioritize improvements based on the competitive environment.
+
+### 4. Develop an Evidence-Based Monetization Strategy
+
+Since free applications are much more common in the dataset, developers should carefully evaluate their pricing strategies.
+
+Possible approaches include freemium functionality, optional premium features, subscriptions, or in-app purchases.
+
+The most suitable strategy should depend on the target audience, user needs, conversion rates, and revenue performance rather than app counts alone.
+
+### 5. Establish a Continuous Feedback Process
+
+Developers should monitor ratings and review volumes regularly and investigate recurring user complaints.
+
+Issues affecting usability, reliability, and essential functionality should be prioritized.
+
+A consistent feedback process can help teams identify problems early and evaluate whether subsequent releases improve user satisfaction.
+
+### 6. Plan and Evaluate Application Updates
+
+Developers should maintain a structured release schedule and measure the effects of changes on ratings, engagement, retention, and stability.
+
+A more complete release-history dataset would help evaluate update frequency and the relationship between releases and application performance.
+
+### 7. Conduct Review Sentiment Analysis
+
+Future analysis should incorporate the text of individual user reviews.
+
+Sentiment analysis and topic classification could help identify recurring complaints, feature requests, and positive user experiences.
+
+These findings could then guide product development priorities.
+
+### 8. Measure More Than Installs and Ratings
+
+Install counts and ratings alone do not provide a complete picture of application success.
+
+Developers should also monitor active users, retention, conversion rates, revenue, crash rates, and customer lifetime value where applicable.
+
+Combining these metrics would provide a more complete understanding of product performance.
+
+## Project Limitations
+
+* Install values are represented by approximate thresholds in the source dataset. Converting these values into numbers does not make them exact download counts.
+* Comparisons and correlations do not establish cause and effect.
+* Missing values and chart filters can affect the records included in calculations.
+* A single recorded last-updated date per app is insufficient to calculate the average time between consecutive updates.
+* Review text is not available, preventing sentiment and topic analysis.
+* Results for content-rating groups with very few applications should be interpreted cautiously.
+* The dataset does not contain all the business metrics needed to evaluate revenue, retention, or customer lifetime value.
+
+## Repository Structure
+
+* `README.md` — project overview, requirements, tools, challenges, insights, and recommendations.
+* `Solutions.md` — answers to the project case-study questions.
+* `docs/` — project reference PDF.
+* `screenshots/` — dashboard screenshots.
+
+## How to Explore the Project
+
+1. Open the [live Looker Studio dashboard](https://datastudio.google.com/s/nFzav0hpAdk).
+2. Explore the dashboard pages and available charts.
+3. Review `Solutions.md` for the answers to the project questions.
+4. Refer to the `screenshots/` folder for static dashboard views.
+
+## Data Source
+
+[Google Play Store Apps Dataset — Kaggle](https://www.kaggle.com/datasets/lava18/google-play-store-apps)
+
+---
+
+**Project Objective:** To use data analysis and visualization to understand Google Play Store application performance, identify actionable insights, and recommend improvements that app developers can evaluate against real-world product metrics.
