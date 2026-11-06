@@ -12,13 +12,13 @@ The interactive dashboard transforms raw application data into visual insights t
 
 ## Dashboard Screenshots
 
-![Dashboard overview](screenshots/678167110-37470232-7f60-425c-9f92-7f96dee72b95.png)
-
 ![Dashboard screenshot 1](screenshots/Screenshot%202026-10-03%20164202.png)
 
 ![Dashboard screenshot 2](screenshots/Screenshot%202026-10-11%20185046.png)
 
 ![Dashboard screenshot 3](screenshots/Screenshot%202026-10-11%20185108.png)
+
+![Dashboard overview](screenshots/678167110-37470232-7f60-425c-9f92-7f96dee72b95.png)
 
 ## Business Problem
 
