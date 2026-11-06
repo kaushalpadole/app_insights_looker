@@ -6,13 +6,23 @@ App Insights is a data analytics project built using **Google Looker Studio** to
 
 The project explores application ratings, installs, reviews, categories, genres, pricing, app sizes, content ratings, and update history to identify patterns in user satisfaction and app popularity.
 
-The interactive dashboard transforms raw application data into visual insights that can help developers and product teams make informed decisions about product development, user engagement, and monetization.
+The interactive dashboard transforms raw application data into visual insights that can help developers and product teams make informed decisions about product development, user engagement, and monetization strategy.
 
 **Live Dashboard:** [View App Insights](https://datastudio.google.com/s/nFzav0hpAdk)
 
+## Dashboard Screenshots
+
+![Dashboard overview](screenshots/678167110-37470232-7f60-425c-9f92-7f96dee72b95.png)
+
+![Dashboard screenshot 1](screenshots/Screenshot%202026-10-03%20164202.png)
+
+![Dashboard screenshot 2](screenshots/Screenshot%202026-10-11%20185046.png)
+
+![Dashboard screenshot 3](screenshots/Screenshot%202026-10-11%20185108.png)
+
 ## Business Problem
 
-The Google Play Store contains applications with different ratings, download volumes, prices, sizes, and target audiences. Understanding these differences can help developers identify opportunities to improve application performance and user satisfaction.
+The Google Play Store contains applications with different ratings, download volumes, prices, sizes, and target audiences. Understanding these differences can help developers identify opportunities to improve product positioning, user experience, and market fit.
 
 This project investigates the following business questions:
 
@@ -123,7 +133,7 @@ Logarithmic scaling was used for scatter plots where appropriate to improve read
 
 ### 4. Choosing Appropriate Aggregations
 
-Different business questions required different calculations. For example, total installs by category required summing install values, while average rating by category required calculating average ratings.
+Different business questions required different calculations. For example, total installs by category required summing install values, while average rating by category required calculating average ratings within groups.
 
 ### 5. Date-Related Limitations
 
@@ -299,4 +309,4 @@ Combining these metrics would provide a more complete understanding of product p
 
 ---
 
-**Project Objective:** To use data analysis and visualization to understand Google Play Store application performance, identify actionable insights, and recommend improvements that app developers can evaluate against real-world product metrics.
+**Project Objective:** To use data analysis and visualization to understand Google Play Store application performance, identify actionable insights, and recommend improvements that app developers can implement.
